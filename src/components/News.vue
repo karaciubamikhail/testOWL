@@ -2,7 +2,13 @@
 import { ref } from 'vue'
 import { onBeforeMount } from 'vue';
 import { useRouter } from 'vue-router';
-
+import { useDataStore } from '../stores/store'
+const datas = useDataStore();
+onBeforeMount(async () => {
+    await datas.FetchData();
+});
+console.log(datas.getData)
+let data = ref(null);
 </script>
 <template>
     <h2 class="newss">Основные новости</h2>

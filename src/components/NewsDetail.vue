@@ -3,7 +3,13 @@ import { ref } from "vue";
 import { onBeforeMount, computed } from "vue";
 import { defineProps, onMounted } from "vue";
 import { useRouter } from "vue-router";
+import { useDataStore } from "../stores/store";
+const datas = useDataStore();
 
+const props = defineProps(["id"]);
+onMounted(async () => {
+  await datas.FetchData(props.id);
+});
 const router = useRouter();
 function closePop() {
   router.push("/news");
