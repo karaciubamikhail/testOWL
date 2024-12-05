@@ -26,9 +26,9 @@
     line-height: 18px;
 }
 .tag-ic {
-    bottom: 4px;
+    bottom: 1px;
     font-size: 0;
-    height: 18x;
+    height: 18px;
     margin-right: 4px;
     position: relative;
     width: 18px;
@@ -74,5 +74,8 @@
   font-size: 14px;
   line-height:14px;
   text-transform: uppercase;
+}
+.tag[color=blue] {
+    border: 1em solid #5b4481;
 }
 </style>

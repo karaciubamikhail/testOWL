@@ -47,7 +47,7 @@
   background: #fff;
   border-radius: 100px;
   content: "";
-  height: 20px;
+  height: 4px;
   left: calc(100% + 8em);
   position: absolute;
   width: 4px;
