@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from "vue";
-import { onBeforeMount, computed } from "vue";
 import { defineProps, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { useDataStore } from "../stores/store";
@@ -42,7 +41,7 @@ function closePop() {
               class="scroll-content"
             >
               <div class="scroll__content">
-                <div class="news-popup__header container_1058">
+                <div class="news-popup__header container">
                   <div class="news-popup-content__breadcrumbs">
                     <div class="bread" color="dark">
                       <div class="bread-item">
@@ -63,18 +62,18 @@ function closePop() {
                     </div>
                   </div>
                 </div>
-                <div class="container_1058 news-popup-content">
+                <div class="container news-popup-content">
                   <div class="news-popup-tags">
-                    <div class="tag-cat active" color="blue">
-                      <div class="tag-cat-text">
+                    <div class="tag active" color="blue">
+                      <div class="tag-text">
                         <span>В СМИ</span>
                       </div>
                     </div>
-                    <div class="tag-cat active" color="red">
-                      <div class="tag-cat-ic">
+                    <div class="tag active" color="red">
+                      <div class="tag-ic">
                         <img src="../assets/icon-glyphs(1).svg" alt="" />
                       </div>
-                      <div class="tag-cat-text">
+                      <div class="tag-text">
                         <span>акции</span>
                       </div>
                     </div>
@@ -130,19 +129,19 @@ function closePop() {
                             >
                           </a>
                           <div class="news-card-inf-tags">
-                            <div class="tag-cat active" color="blue">
-                              <div class="tag-cat-text">
+                            <div class="tag active" color="blue">
+                              <div class="tag-text">
                                 <span>В СМИ</span>
                               </div>
                             </div>
-                            <div class="tag-cat active" color="red">
-                              <div class="tag-cat-ic">
+                            <div class="tag active" color="red">
+                              <div class="tag-ic">
                                 <img
                                   src="../assets/icon-glyphs(1).svg"
                                   alt=""
                                 />
                               </div>
-                              <div class="tag-cat-text">
+                              <div class="tag-text">
                                 <span>акции</span>
                               </div>
                             </div>

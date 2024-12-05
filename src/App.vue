@@ -1,5 +1,4 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 import News from './components/News.vue';
 import NewsDetail from './components/NewsDetail.vue';
 components:{

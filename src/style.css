@@ -13,7 +13,7 @@ body, html {
     overflow-y: scroll!important;
   }
 }
-.container_1058 {
+.container {
   margin: 0 auto;
   width: calc(100% - 480em);
 }
@@ -2661,10 +2661,10 @@ footer {
 .bread-item-txt.no-link {
   opacity: .6
 }
-.tag-cat.active {
+.tag.active {
   opacity: 1;
 }
-.tag-cat {
+.tag {
   border-radius: 16em;
   -webkit-box-flex: 0;
   align-items: flex-end;
@@ -2676,11 +2676,11 @@ footer {
   transition: opacity .2s ease-in-out
 }
 
-.tag-cat:hover {
+.tag:hover {
   opacity: .8
 }
 
-.tag-cat-text span {
+.tag-text span {
  font-family: "Onest", serif;font-weight:400;
   font-size: 14rem;
   letter-spacing: .28rem;
@@ -2688,14 +2688,14 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-  .tag-cat-text span {
+  .tag-text span {
       font-size:12rem;
       letter-spacing: .24rem;
       line-height: 16rem
   }
 }
 
-.tag-cat-cross {
+.tag-cross {
   font-size: 0;
   margin-left: 4rem;
   position: relative;
@@ -2703,11 +2703,11 @@ footer {
   width: 16rem
 }
 
-.tag-cat-cross img {
+.tag-cross img {
   width: 100%
 }
 
-.tag-cat-ic {
+.tag-ic {
   bottom: 1rem;
   font-size: 0;
   height: 18rem;
@@ -2717,39 +2717,39 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-  .tag-cat-ic {
+  .tag-ic {
       height:16rem;
       width: 16rem
   }
 }
 
-.tag-cat-ic img {
+.tag-ic img {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%
 }
 
-.tag-cat[color=blue] {
+.tag[color=blue] {
   border: 1em solid #5b4481
 }
 
-.tag-cat[color=blue] span {
+.tag[color=blue] span {
   color: #5b4481
 }
 .h1 {
   color: #423f3f;
   margin-bottom: 32em;
 }
-.tag-cat[color=red] {
+.tag[color=red] {
   border: 1em solid #ca2250
 }
 
-.tag-cat[color=red] span {
+.tag[color=red] span {
   color: #ca2250
 }
 
-.tag-cat.active {
+.tag.active {
   opacity: 1
 }
 
@@ -3089,7 +3089,7 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-  .news-popup .container_1058 {
+  .news-popup .container {
       width:100%
   }
 }
@@ -3146,7 +3146,7 @@ footer {
   }
 }
 
-.news-popup .tag-cat {
+.news-popup .tag {
   cursor: default
 }
 
@@ -3477,7 +3477,7 @@ footer {
   }
 }
 @media only screen and (max-width: 767px) {
-  .news-popup .container_1058 {
+  .news-popup .container {
       width: 100%;
   }
 }
