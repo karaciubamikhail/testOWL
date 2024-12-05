@@ -11,7 +11,7 @@ export const useDataStore = defineStore('data', {
 },
   actions:{
     async FetchData(id){
-        let response = await fetch('https://jsonplaceholder.typicode.com/users');
+        let response = await fetch('https://jsonplaceholder.typicode.com/users');//fake fetch
         const datas = await response.json();
         if(id !=undefined){
             id = datas.findIndex((el)=>{return el.id == id})
