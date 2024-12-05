@@ -291,23 +291,6 @@ h1, h2, h3, h4, h5 {
   background: #f3f3f3
 }
 
-.news-card-hover {
-  font-size: 0;
-  height: 133%;
-  left: -3%;
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  top: -11%;
-  transition: .2s ease-in-out;
-  width: 106.4%;
-  z-index: 0
-}
-
-.news-card-hover img {
-  height: 100%;
-  width: 100%
-}
 
 .news-card:hover .news-card-hover {
   opacity: 1
@@ -693,11 +676,6 @@ h1, h2, h3, h4, h5 {
       display:none
   }
 }
-
-.after-display-none .news-popup-sect:after {
-  display: none
-}
-
 .news-popup .exit-btn {
   position: absolute;
   right: 0;
@@ -839,17 +817,6 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-.news-popup-subscribe {
-  margin-top: 36em;
-  -webkit-box-flex: 0;
-  display: flex
-}
-
-.news-popup-subscribe-btn {
-  margin-left: auto;
-  margin-top: auto
-}
-
 .news-popup-text {
   width: 600em
 }
@@ -895,24 +862,9 @@ h1, h2, h3, h4, h5 {
   margin-top: 32em
 }
 
-.news-popup-dynamic-sect {
-  -webkit-box-flex: 0;
-  display: flex;
-  flex-direction: column;
-  margin-top: 32px;
-  row-gap: 32rem
-}
-
 .news-popup-dynamic-sect .news-popup-dynamic-block {
   margin-top: unset
 }
-
-.news-popup-ipoteka {
-  -webkit-box-flex: 0;
-  display: flex;
-  flex-direction: column
-}
-
 .news-popup-h2 {
   color: #423f3f;
  font-family: "Unbounded", serif;font-weight:700;
