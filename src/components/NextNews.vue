@@ -3,7 +3,7 @@
 </script>
 <template>
     <div class="news-card arrow-mask-hover" bg="gray" type-mask="" id="430" picture="https://bsk-admin.testers-site.ru/upload/iblock/83c/4r9pfd5uvv98d093h508qv9ufhqdpfpa/077A9084.jpg">
-        <i class="news-card_circle layer1__circle layer1__circle--bottom-right"></i>
+        <i class="news-card-circle"></i>
         <div class="arrow-mask" isbackground="true" size="80" type="right">
             <div class="arrow-mask-ic">
                 <img src="../assets/icon-glyphs.svg" alt="" />
@@ -32,7 +32,7 @@
 </div>
 </template>
 <style>
-.news-card_circle {
+.news-card-circle {
     display: none;
 }
 .news-card {
@@ -263,7 +263,7 @@
     border-radius: 16px;
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-    .news-card_circle {
+    .news-card-circle {
         position: absolute;
         z-index: 0;
         width: 67px;
@@ -284,7 +284,7 @@
     }
 }
 @media only screen and (max-width: 767px) {
-    .news-card_circle {
+    .news-card-circle {
         display: block;
         position: absolute;
         z-index: 0;
