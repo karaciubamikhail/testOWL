@@ -1,20 +1,20 @@
 <script setup>
-import Breadcrumbs from "./Breadcrumbs.vue";
-import Tags from "./Tags.vue";
-import NextNews from './NextNews.vue'
-import { defineProps, onMounted } from "vue";
-import { useRouter } from "vue-router";
-import { useDataStore } from "../stores/store";
-const datas = useDataStore();
+    import Breadcrumbs from "./Breadcrumbs.vue";
+    import Tags from "./Tags.vue";
+    import NextNews from './NextNews.vue'
+    import { defineProps, onMounted } from "vue";
+    import { useRouter } from "vue-router";
+    import { useDataStore } from "../stores/store";
+    const datas = useDataStore();
 
-const props = defineProps(["id"]);
-onMounted(async () => {
-  await datas.FetchData(props.id);
-});
-const router = useRouter();
-function closePop() {
-  router.push("/news");
-}
+    const props = defineProps(["id"]);
+    onMounted(async () => {
+        await datas.FetchData(props.id);
+    });
+    const router = useRouter();
+    function closePop() {
+        router.push("/news");
+    }
 /*
   <div v-for="data in datas.getData">
     {{ data.name }}
@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .news-card .arrow-mask {
-    inset: auto 0 0 auto
+    inset: auto 0 0 auto;
   }
 
 .scroll__content{
@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .news-popup-sect__exit-btn:hover {
-    opacity: .6
+    opacity: .6;
 }
 
 .news-popup-sect__exit-btn img {
@@ -182,7 +182,6 @@ h1, h2, h3, h4, h5 {
     object-fit: cover;
     width: 32px;
 }
-
 
 .news-popup {
     height: 100%;
@@ -317,6 +316,16 @@ h1, h2, h3, h4, h5 {
     z-index: 2;
     border-radius: 16px;
 }
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .news-card-title span {
+    color: #423f3f;
+    font-family: "Unbounded", serif;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 32px;
+    transition: .2s ease-in-out;
+}
+}
 @media only screen and (min-width: 577px) and (max-width: 768px) {
     .news-popup-tags[data-v-ebf45262] {
         -webkit-box-flex: 0;
@@ -331,22 +340,12 @@ h1, h2, h3, h4, h5 {
         width: 100%;
     }
 }
-@media only screen and (min-width: 1025px) and (max-width: 1440px) {
-    .news-card-title span {
-    color: #423f3f;
-    font-family: "Unbounded", serif;
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 32px;
-    transition: .2s ease-in-out;
-}
-}
 @media only screen and (max-width: 767px) {
     .container{
         max-width: 91%;
     }
     .news-popup .news-popup-sect__exit-btn {
-    right: -3px;
+        right: -3px;
 }
     .news-popup-sect__exit-btn {
         height:48px;
@@ -439,7 +438,7 @@ h1, h2, h3, h4, h5 {
         width: 100%;
     }
     .tag-pos {
-        padding: 8rem 16rem;
+        padding: 8px 16px;
     }
     .news-popup__scrollbar{
         overflow-y: scroll!important;
