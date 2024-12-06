@@ -12,7 +12,7 @@
     <h2 class="news-header">Основные новости</h2>
     <p class="news-desk">Держим в курсе новостей о жизни Брянской Строительной Компании: ход строительства, акции, мероприятия и полезные советы для нынешних и будущих владельцев квартир.</p>
     <div class="news-list">
-        <RouterLink :to="{ name: 'newsDetail', params: { id: to.id} }" class="news-list__link" v-for="to in datas.getData">{{ to.name }}</RouterLink>
+        <RouterLink :to="{ name: 'newsDetail', params: { slug: to.code} }" class="news-list__link" v-for="to in datas.getData">{{ to.title }}</RouterLink>
     </div>
 </template>
 <style scoped>

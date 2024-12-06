@@ -6,21 +6,19 @@
     import { useRouter } from "vue-router";
     import { useDataStore } from "../stores/store";
     const datas = useDataStore();
-
-    const props = defineProps(["id"]);
-    onMounted(async () => {
-        await datas.FetchData(props.id);
-    });
+    const props = defineProps(["slug"]);
     const router = useRouter();
+    onMounted(async () => {
+        await datas.FetchData(props.slug);
+    });
     function closePop() {
         router.push("/news");
     }
-/*
-  <div v-for="data in datas.getData">
-    {{ data.name }}
-  </div>*/
 </script>
 <template>
+    <div v-for="data in datas.getNext">
+        {{ data }}
+    </div>
     <div class="news">
         <div class="news__content">
             <div class="news-popup">
@@ -31,26 +29,24 @@
                     <div class="news-popup__scrollbar scroll">
                         <div class="news-popup__header container">
                             <div class="news-popup__breadcrumbs">
-                                <Breadcrumbs></Breadcrumbs>
+                                <Breadcrumbs :bread = "datas.getData"></Breadcrumbs>
                             </div>
                         </div>
                         <div class="container news-popup-content">
-                            <div class="news-popup-tags">
-                                <Tags></Tags>
-                            </div>
+                            <Tags :dataTags="datas.getData.tags"></Tags>
                         <div class="h1 news-popup-title">
                             <h1>
-                                Средняя ставка по ипотеке в России превысила 8%
+                                {{ datas.getData.title }}
                             </h1>
                         </div>
                         <div class="news-popup-date">
-                            <span>06.10.2023</span>
+                            <span>{{datas.getData.date}}</span>
                         </div>
                         <div class="news-popup-dynamic-block news-popup__next">
                             <div class="news-popup-h2">
                                 <span>Следующая статья</span>
                             </div>
-                            <NextNews></NextNews>
+                            <NextNews :next = "datas.getNext"></NextNews>
                         </div>
                     </div>
                 </div>

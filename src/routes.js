@@ -10,7 +10,7 @@ export const router =  createRouter({
             component: News,
         },
         {
-            path: '/news/:id',
+            path: '/news/:slug',
             component: NewsDetail,
             name:'newsDetail',
             props: true  

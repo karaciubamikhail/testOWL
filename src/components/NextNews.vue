@@ -1,5 +1,12 @@
 <script setup>
     import Tags from './Tags.vue';
+    const emit = defineEmits(['update'])
+    const props = defineProps(["next"]);
+    import { useDataStore } from "../stores/store";
+    const datas = useDataStore();
+    async function forceUpdate() {
+        await datas.FetchData(props.next.code);
+    }
 </script>
 <template>
     <div class="news-card arrow-mask-hover" bg="gray" type-mask="" id="430" picture="https://bsk-admin.testers-site.ru/upload/iblock/83c/4r9pfd5uvv98d093h508qv9ufhqdpfpa/077A9084.jpg">
@@ -12,7 +19,7 @@
         <div class="news-card-cont">
             <div class="news-card-poster">
                 <div class="tag-pos news-card-date" type="purple" fontsize="14">
-                    <span>25.11.2024</span>
+                    <span>{{next.date}}</span>
                 </div>
                 <div class="news-card-poster-img">
                 <picture>
@@ -21,11 +28,17 @@
             </div>
         </div>
             <div class="news-card-inf">
-                <a href="/news/" class="news-card-title">
-                    <span>Правительство продлило «Льготную ипотеку» и расширило «Семейную».</span>
-                </a>
+                <RouterLink
+                    tag="a"
+                    class="news-card-title" 
+                    :to="{ name: 'newsDetail', 
+                    params: { slug: next.code} }" 
+                    @click = 'forceUpdate' 
+                    >
+                    <span>{{ next.title }}</span>
+                </RouterLink>
             <div class="news-card-inf-tags">
-                <Tags></Tags>
+                <Tags :dataTags = "next.tags"></Tags>
             </div>
         </div>
     </div>

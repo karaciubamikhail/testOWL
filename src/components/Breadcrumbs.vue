@@ -1,4 +1,5 @@
 <script setup>
+    const props = defineProps(["bread"]);
 </script>
 <template>
     <div class="bread" color="dark">
@@ -9,7 +10,7 @@
             <a href="/news" class="router-link-active bread-item-txt">Новости</a>
         </div>
         <div class="bread-item">
-            <span class="no-link bread-item-txt">Средняя ставка по ипотеке в России превысила 8%</span>
+            <span class="no-link bread-item-txt">{{ bread.title }}</span>
         </div>
     </div>    
 </template>
