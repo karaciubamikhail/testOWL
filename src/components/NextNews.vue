@@ -3,7 +3,7 @@
 </script>
 <template>
     <div class="news-card arrow-mask-hover" bg="gray" type-mask="" id="430" picture="https://bsk-admin.testers-site.ru/upload/iblock/83c/4r9pfd5uvv98d093h508qv9ufhqdpfpa/077A9084.jpg">
-        <i class="layer1__circle layer1__circle--bottom-right"></i>
+        <i class="news-card_circle layer1__circle layer1__circle--bottom-right"></i>
         <div class="arrow-mask" isbackground="true" size="80" type="right">
             <div class="arrow-mask-ic">
                 <img src="../assets/icon-glyphs.svg" alt="" />
@@ -32,17 +32,8 @@
 </div>
 </template>
 <style>
-.layer1__circle {
-    position: absolute;
-    z-index: 0;
-    width: 67px;
-    height: 67px;
-    background: #fff;
-    border-radius: 20px;
-}
-.layer1__circle--bottom-right {
-    bottom: -8px;
-    right: -8px;
+.news-card_circle {
+    display: none;
 }
 .news-card {
     cursor: pointer;
@@ -272,6 +263,16 @@
     border-radius: 16px;
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
+    .news-card_circle {
+        position: absolute;
+        z-index: 0;
+        width: 67px;
+        height: 67px;
+        background: #fff;
+        border-radius: 20px;
+        bottom: -8px;
+        right: -8px;
+    }
     .news-card-poster {
         height: 350px;
         width: 100%;
@@ -283,24 +284,17 @@
     }
 }
 @media only screen and (max-width: 767px) {
-    .news-card-cont {
-        border-radius:16em;
-        flex-direction: column;
-        height: auto;
-        -webkit-mask-image: none!important;
-        mask-image: none!important
+    .news-card_circle {
+        display: block;
+        position: absolute;
+        z-index: 0;
+        width: 67px;
+        height: 67px;
+        background: #fff;
+        border-radius: 20px;
+        bottom: -8px;
+        right: -8px;
     }
-}
-@media only screen and (max-width: 767px) {
-    .news-card-cont {
-        border-radius: 16em;
-        flex-direction: column;
-        height: auto;
-        -webkit-mask-image: none !important;
-        mask-image: none !important;
-    }
-}
-@media only screen and (max-width: 767px) {
     .news-card-poster {
         height:164px;
         width: 100%;
