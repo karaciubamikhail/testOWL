@@ -1,14 +1,12 @@
 <script setup>
-import { ref } from 'vue'
-import { onBeforeMount } from 'vue';
-import { useRouter } from 'vue-router';
-import { useDataStore } from '../stores/store'
-const datas = useDataStore();
-onBeforeMount(async () => {
-    await datas.FetchData();
-});
-console.log(datas.getData)
-let data = ref(null);
+    import { ref } from 'vue'
+    import { onBeforeMount } from 'vue';
+    import { useRouter } from 'vue-router';
+    import { useDataStore } from '../stores/store'
+    const datas = useDataStore();
+    onBeforeMount(async () => {
+        await datas.FetchData();
+    });
 </script>
 <template>
     <h2 class="news-header">Основные новости</h2>

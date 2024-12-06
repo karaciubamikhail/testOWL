@@ -65,4 +65,26 @@
 .bread-item-txt.no-link {
   opacity: 0.6;
 }
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .bread-item:not(:last-child):after {
+        background: #fff;
+        border-radius: 100px;
+        content: "";
+        height: 4px;
+        left: calc(90% + 8em);
+        position: absolute;
+        width: 4px;
+    }
+}
+@media(max-width:428px){
+    .bread-item-txt{
+        white-space: nowrap;       
+    }
+    .bread{
+        overflow-x:scroll!important;
+    }
+    .bread::-webkit-scrollbar {
+        width: 0;
+    }
+}
 </style>

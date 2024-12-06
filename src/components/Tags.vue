@@ -56,26 +56,26 @@
     position: relative;
     transition: opacity .2s ease-in-out;
 }
-@media only screen and (max-width: 767px) {
-  .tag-pos[fontSize="14"] span {
-      font-size: 12px;
-      line-height: 12px;
-  }
-}
 .tag-pos[type=purple] {
-  background: #5b4481cc;
+    background: #5b4481cc;
 }
 .tag-pos[type=purple] span {
-  color: #fff;
+    color: #fff;
 }
 .tag-pos[fontSize="14"] span {
-  font-family: "Onest", serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height:14px;
-  text-transform: uppercase;
+    font-family: "Onest", serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height:14px;
+    text-transform: uppercase;
 }
 .tag[color=blue] {
     border: 1em solid #5b4481;
+}
+@media only screen and (max-width: 767px) {
+    .tag-pos[fontSize="14"] span {
+        font-size: 12px;
+        line-height: 12px;
+    }
 }
 </style>

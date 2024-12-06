@@ -1,6 +1,6 @@
 <script setup>
-import News from './components/News.vue';
-import NewsDetail from './components/NewsDetail.vue';
+  import News from './components/News.vue';
+  import NewsDetail from './components/NewsDetail.vue';
 components:{
   News,
   NewsDetail
