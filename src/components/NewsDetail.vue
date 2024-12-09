@@ -2,13 +2,16 @@
     import Breadcrumbs from "./Breadcrumbs.vue";
     import Tags from "./Tags.vue";
     import NextNews from './NextNews.vue'
-    import { defineProps, onMounted } from "vue";
+    import { defineProps, onMounted , onUpdated } from "vue";
     import { useRouter } from "vue-router";
     import { useDataStore } from "../stores/store";
     const datas = useDataStore();
     const props = defineProps(["slug"]);
     const router = useRouter();
     onMounted(async () => {
+        await datas.FetchData(props.slug);
+    });
+    onUpdated(async () => {
         await datas.FetchData(props.slug);
     });
     function closePop() {

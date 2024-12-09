@@ -5,7 +5,7 @@
     <div class="news-popup-tags">
         <div class="tag active" v-for="data in dataTags" :color="data.values[0].color">
             <div class="tag-ic" v-if="data.values[0].src">
-                <img src="../assets/icon-glyphs(1).svg" alt="" />
+                <img src="../assets/percent.svg" alt="" />
             </div>
             <div class="tag-text">
                 <span>{{data.values[0].name}}</span>

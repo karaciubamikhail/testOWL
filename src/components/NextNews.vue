@@ -4,9 +4,6 @@
     const props = defineProps(["next"]);
     import { useDataStore } from "../stores/store";
     const datas = useDataStore();
-    async function forceUpdate() {
-        await datas.FetchData(props.next.code);
-    }
 </script>
 <template>
     <div class="news-card arrow-mask-hover" bg="gray" type-mask="" id="430" picture="https://bsk-admin.testers-site.ru/upload/iblock/83c/4r9pfd5uvv98d093h508qv9ufhqdpfpa/077A9084.jpg">
@@ -33,7 +30,6 @@
                     class="news-card-title" 
                     :to="{ name: 'newsDetail', 
                     params: { slug: next.code} }" 
-                    @click = 'forceUpdate' 
                     >
                     <span>{{ next.title }}</span>
                 </RouterLink>
